@@ -1,0 +1,933 @@
+(function () {
+  'use strict';
+
+  var I18N = {
+    PT: {
+      nav: {
+        skip: 'Ir para o conteúdo',
+        about: 'Quem Somos',
+        products: 'Produtos',
+        differentials: 'Diferenciais',
+        testimonials: 'Depoimentos',
+        contact: 'Contato',
+        menuOpen: 'Abrir menu',
+        menuClose: 'Fechar menu',
+        menuLabel: 'Menu principal',
+        langLabel: 'Idioma',
+        home: 'King Congelados — página inicial'
+      },
+      hero: {
+        s1Title: 'Conectamos o mundo ao seu negócio',
+        s1TextHTML: 'Importação e distribuição de congelados com <strong>segurança e eficiência logística</strong>',
+        s2Title: 'Qualidade que vem de longe. Confiança que chega até você',
+        s2TextHTML: 'Frutas e vegetais congelados com <strong>qualidade internacional</strong> para o seu negócio',
+        label: 'Destaques King Congelados'
+      },
+      trust: {
+        w1: 'Qualidade Internacional',
+        w2: 'Frutas e Vegetais Congelados',
+        w3: 'Cadeia do Frio Controlada',
+        w4: 'Excelência em Importação',
+        w5: 'Distribuição em Todo o Brasil',
+        w6: 'Atendimento Especializado B2B',
+        w7: 'Segurança Alimentar',
+        w8: 'Rastreabilidade dos Produtos',
+        w9: 'Tecnologia de Congelamento',
+        w10: 'Logística Refrigerada',
+        w11: 'Seleção Rigorosa de Produtos',
+        w12: 'Compromisso com a Qualidade',
+        w13: 'Parcerias Comerciais de Confiança',
+        w14: 'Soluções para Indústrias e Varejo',
+        w15: 'Experiência no Mercado Internacional',
+        w16: 'Eficiência em Cada Entrega'
+      },
+      about: {
+        titleHTML: 'Uma História de Qualidade, Confiança e Parcerias',
+        p1HTML: 'Com mais de 10 anos de experiência no mercado de importação, a <strong>King Congelados</strong> atua no fornecimento de frutas e vegetais congelados, oferecendo qualidade, segurança e soluções de abastecimento para empresas de diferentes segmentos.',
+        p2: 'Nossa atuação vai além da distribuição. Trabalhamos com produtos selecionados e uma operação logística especializada, mantendo o cuidado com a cadeia do frio em todas as etapas, desde a origem até a entrega.',
+        p3: 'Atendemos indústrias alimentícias, redes de supermercados, distribuidores e operações de food service, com foco na qualidade dos produtos, eficiência no atendimento e construção de relações comerciais sólidas e duradouras.',
+        s1num: '+10 Anos',
+        s1: 'Experiência no Mercado',
+        s2num: 'B2B',
+        s2: 'Atendimento Empresarial',
+        s3num: 'ABF',
+        s3: 'Tecnologia de Congelamento',
+        s4num: '100%',
+        s4: 'Rastreabilidade dos Produtos',
+      },
+      mvv: {
+        title: 'Nossa Essência',
+        missionTitle: 'MISSÃO',
+        mission: 'Conectar o mercado brasileiro a frutas e vegetais congelados de qualidade internacional, oferecendo soluções de abastecimento que combinam segurança alimentar, eficiência logística e compromisso com o crescimento dos nossos parceiros.',
+        visionTitle: 'VISÃO',
+        vision: 'Ser reconhecida como uma das principais referências nacionais em importação e distribuição de alimentos congelados, destacando-se pela excelência operacional, confiança e construção de parcerias comerciais duradouras.',
+        valuesTitle: 'VALORES',
+        values: 'Qualidade em Cada Etapa · Respeito e Compromisso · Integridade nas Relações · Excelência no que Fazemos · Parcerias que Geram Valor · Evolução Constante.'
+      },
+      diff: {
+        titleHTML: 'Por Que Nos Escolher?',
+        sub: 'Qualidade, segurança e eficiência em cada etapa. Da importação à distribuição, oferecemos soluções que garantem confiança, praticidade e um abastecimento eficiente para o seu negócio.',
+        d1Title: 'Blast Freezing – Congelamento Ultrarrápido',
+        d1Desc: 'Tecnologia de congelamento ultrarrápido que reduz a formação de grandes cristais de gelo, ajudando a preservar a textura, as características naturais e a qualidade das frutas e vegetais.',
+        d2Title: 'Importação Certificada',
+        d2Desc: 'Operações de importação realizadas em conformidade com as exigências legais e sanitárias, respeitando as regulamentações nacionais e internacionais para garantir segurança e procedência.',
+        d3Title: 'Qualidade e Procedência',
+        d3Desc: 'Produtos selecionados de fornecedores internacionais, seguindo critérios de qualidade, segurança alimentar e padronização para atender às exigências do mercado.',
+        d4Title: 'Cadeia do Frio Controlada',
+        d4Desc: 'Monitoramento da temperatura durante o armazenamento e transporte, contribuindo para a conservação, segurança e integridade dos produtos até a entrega.',
+        d5Title: 'Distribuição B2B Nacional',
+        d5Desc: 'Soluções de abastecimento para indústrias, distribuidores, supermercados e food service, com eficiência logística e compromisso em cada entrega.',
+        d6Title: 'Atendimento Especializado',
+        d6Desc: 'Atendimento comercial próximo e personalizado, com foco em compreender as necessidades de cada cliente e oferecer soluções adequadas à sua operação.',
+        d7Title: 'Variedade de Produtos',
+        d7Desc: 'Portfólio diversificado de frutas e vegetais congelados, oferecendo versatilidade, praticidade e soluções para diferentes demandas do mercado alimentício.'
+      },
+      contact: {
+        desc: 'Buscamos parceiros comerciais sérios para relações de longo prazo. Garanta suprimento contínuo de altíssimo padrão para sua operação.',
+        b1: 'Fornecimento contínuo e sem ruptura de estoque',
+        b2: 'Produtos com certificação sanitária internacional',
+        b3: 'Logística frigorificada de ponta a ponta',
+        b4: 'Suporte técnico e comercial dedicado',
+        b5: 'Contratos B2B com condições competitivas',
+        formCompany: 'NOME DA EMPRESA',
+        formCnpj: 'CNPJ',
+        formEmail: 'E-MAIL CORPORATIVO',
+        formPhone: 'WHATSAPP / TELEFONE',
+        formVolume: 'VOLUME MENSAL ESTIMADO',
+        volPlaceholder: 'Selecione o volume',
+        vol1: 'Até 5 toneladas/mês',
+        vol2: '5 a 10 toneladas/mês',
+        vol3: '10 a 20 toneladas/mês',
+        vol4: 'Acima de 20 toneladas/mês',
+        formMsg: 'MENSAGEM (OPCIONAL)',
+        phonePh: '(00) 00000-0000',
+        cnpjPh: '00.000.000/0000-00',
+        submit: 'Enviar Proposta Comercial',
+        sending: 'Enviando...',
+        errRequired: 'Preencha os campos obrigatórios: Nome da Empresa, CNPJ, E-mail, Telefone e Volume.',
+        errEmail: 'E-mail inválido. Confira o endereço digitado.',
+        errPhone: 'Telefone inválido. Use: (61) 98765-4321 ou +55 (61) 98765-4321',
+        errCnpj: 'CNPJ inválido. O formato correto é: 00.000.000/0001-00',
+        errSend: 'Ocorreu um erro ao enviar. Tente novamente ou fale conosco pelo <a href="https://wa.me/556130387855" target="_blank" rel="noopener">WhatsApp: +55 (61) 3038-7855</a>.',
+        errWait: 'Aguarde alguns segundos antes de enviar novamente.',
+        privacyHTML: 'Ao enviar, você concorda com a nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.'
+      },
+      modal: {
+        title: 'Proposta Enviada!',
+        message: 'Recebemos suas informações com sucesso. Nossa equipe comercial entrará em contato em breve.',
+        closeBtn: 'Fechar'
+      },
+      footer: {
+        contactTitle: 'Contato',
+        mapLink: 'Ver no Mapa →',
+        addressText: 'Núcleo Rural Alexandre Gusmão, Brasília — DF, Brasil',
+        rights: 'Todos os direitos reservados.',
+        privacy: 'Política de Privacidade'
+      }
+    },
+
+    EN: {
+      nav: {
+        skip: 'Skip to content',
+        about: 'About Us',
+        products: 'Products',
+        differentials: 'Differentials',
+        testimonials: 'Testimonials',
+        contact: 'Contact',
+        menuOpen: 'Open menu',
+        menuClose: 'Close menu',
+        menuLabel: 'Main menu',
+        langLabel: 'Language',
+        home: 'King Congelados — home page'
+      },
+      hero: {
+        s1Title: 'We connect the world to your business',
+        s1TextHTML: 'Import and distribution of frozen foods with <strong>safety and logistics efficiency</strong>',
+        s2Title: 'Quality from afar. Trust that reaches you',
+        s2TextHTML: 'Frozen fruits and vegetables with <strong>international quality</strong> for your business',
+        label: 'King Congelados highlights'
+      },
+      trust: {
+        w1: 'International Quality',
+        w2: 'Frozen Fruits and Vegetables',
+        w3: 'Controlled Cold Chain',
+        w4: 'Import Excellence',
+        w5: 'Distribution Across Brazil',
+        w6: 'Specialized B2B Service',
+        w7: 'Food Safety',
+        w8: 'Product Traceability',
+        w9: 'Freezing Technology',
+        w10: 'Refrigerated Logistics',
+        w11: 'Rigorous Product Selection',
+        w12: 'Commitment to Quality',
+        w13: 'Trusted Business Partnerships',
+        w14: 'Solutions for Industry and Retail',
+        w15: 'International Market Experience',
+        w16: 'Efficiency in Every Delivery'
+      },
+      about: {
+        titleHTML: 'A Story of Quality, Trust and Partnerships',
+        p1HTML: 'With more than 10 years of experience in the import market, <strong>King Congelados</strong> supplies frozen fruits and vegetables, offering quality, safety and supply solutions to companies in many segments.',
+        p2: 'Our work goes beyond distribution. We handle selected products and a specialized logistics operation, taking care of the cold chain at every step, from origin to delivery.',
+        p3: 'We serve food industries, supermarket chains, distributors and food service operations, focusing on product quality, efficient service and building solid, lasting business relationships.',
+        s1num: '10+ Years',
+        s1: 'Market Experience',
+        s2num: 'B2B',
+        s2: 'Business Service',
+        s3num: 'ABF',
+        s3: 'Freezing Technology',
+        s4num: '100%',
+        s4: 'Product Traceability',
+      },
+      mvv: {
+        title: 'Our Essence',
+        missionTitle: 'MISSION',
+        mission: 'To connect the Brazilian market with internationally sourced, high-quality frozen fruits and vegetables, offering supply solutions that combine food safety, logistics efficiency and a commitment to our partners’ growth.',
+        visionTitle: 'VISION',
+        vision: 'To be recognized as one of the leading national references in the import and distribution of frozen foods, standing out for operational excellence, trust and building lasting business partnerships.',
+        valuesTitle: 'VALUES',
+        values: 'Quality at Every Step · Respect and Commitment · Integrity in Relationships · Excellence in What We Do · Partnerships That Create Value · Constant Evolution.'
+      },
+      diff: {
+        titleHTML: 'Why Choose Us?',
+        sub: 'Quality, safety and efficiency at every step. From import to distribution, we offer solutions that ensure trust, practicality and efficient supply for your business.',
+        d1Title: 'Blast Freezing – Ultra-Fast Freezing',
+        d1Desc: 'Ultra-fast freezing technology that reduces the formation of large ice crystals, helping preserve the texture, natural characteristics and quality of fruits and vegetables.',
+        d2Title: 'Certified Import',
+        d2Desc: 'Import operations carried out in compliance with legal and sanitary requirements, following national and international regulations to ensure safety and origin.',
+        d3Title: 'Quality and Origin',
+        d3Desc: 'Products selected from international suppliers, following quality, food safety and standardization criteria to meet market requirements.',
+        d4Title: 'Controlled Cold Chain',
+        d4Desc: 'Temperature monitoring during storage and transport, helping ensure the preservation, safety and integrity of products until delivery.',
+        d5Title: 'National B2B Distribution',
+        d5Desc: 'Supply solutions for industries, distributors, supermarkets and food service, with logistics efficiency and commitment in every delivery.',
+        d6Title: 'Specialized Service',
+        d6Desc: 'Close, personalized sales service focused on understanding each client’s needs and offering solutions suited to their operation.',
+        d7Title: 'Product Variety',
+        d7Desc: 'A diverse portfolio of frozen fruits and vegetables, offering versatility, practicality and solutions for different food market demands.'
+      },
+      contact: {
+        desc: 'We are looking for serious commercial partners for long-term relationships. Ensure a continuous supply of the highest standard for your operation.',
+        b1: 'Continuous supply without stockouts',
+        b2: 'Products with international sanitary certification',
+        b3: 'End-to-end refrigerated logistics',
+        b4: 'Dedicated technical and commercial support',
+        b5: 'B2B contracts with competitive conditions',
+        formCompany: 'COMPANY NAME',
+        formCnpj: 'TAX ID / REGISTRATION',
+        formEmail: 'CORPORATE EMAIL',
+        formPhone: 'WHATSAPP / PHONE',
+        formVolume: 'ESTIMATED MONTHLY VOLUME',
+        volPlaceholder: 'Select volume',
+        vol1: 'Up to 5 tons/month',
+        vol2: '5 to 10 tons/month',
+        vol3: '10 to 20 tons/month',
+        vol4: 'Over 20 tons/month',
+        formMsg: 'MESSAGE (OPTIONAL)',
+        phonePh: '+00 000 000 0000',
+        cnpjPh: '',
+        submit: 'Submit Commercial Proposal',
+        sending: 'Sending...',
+        errRequired: 'Please fill in the required fields: Company Name, Tax ID, Email, Phone and Volume.',
+        errEmail: 'Invalid email. Please check the address.',
+        errPhone: 'Invalid phone. Include the country code, e.g. +44 20 7946 0958',
+        errCnpj: 'Invalid Tax ID.',
+        errSend: 'An error occurred while sending. Please try again or contact us via <a href="https://wa.me/556130387855" target="_blank" rel="noopener">WhatsApp: +55 (61) 3038-7855</a>.',
+        errWait: 'Please wait a few seconds before sending again.',
+        privacyHTML: 'By submitting, you agree to our <a href="politica-de-privacidade.html">Privacy Policy</a> (in Portuguese).'
+      },
+      modal: {
+        title: 'Proposal Sent!',
+        message: 'We have successfully received your information. Our commercial team will contact you shortly.',
+        closeBtn: 'Close'
+      },
+      footer: {
+        contactTitle: 'Contact',
+        mapLink: 'View on Map →',
+        addressText: 'Alexandre Gusmão Rural Nucleus, Brasília — DF, Brazil',
+        rights: 'All rights reserved.',
+        privacy: 'Privacy Policy'
+      }
+    },
+
+    AR: {
+      nav: {
+        skip: 'انتقل إلى المحتوى',
+        about: 'معلومات عنا',
+        products: 'منتجاتنا',
+        differentials: 'مميزاتنا',
+        testimonials: 'آراء العملاء',
+        contact: 'اتصل بنا',
+        menuOpen: 'فتح القائمة',
+        menuClose: 'إغلاق القائمة',
+        menuLabel: 'القائمة الرئيسية',
+        langLabel: 'اللغة',
+        home: 'King Congelados — الصفحة الرئيسية'
+      },
+      hero: {
+        s1Title: 'نربط العالم بعملك',
+        s1TextHTML: 'استيراد وتوزيع الأغذية المجمدة <strong>بأمان وكفاءة لوجستية</strong>',
+        s2Title: 'جودة تأتي من بعيد. وثقة تصل إليك',
+        s2TextHTML: 'فواكه وخضروات مجمدة <strong>بجودة عالمية</strong> لعملك',
+        label: 'أبرز ما في King Congelados'
+      },
+      trust: {
+        w1: 'جودة عالمية',
+        w2: 'فواكه وخضروات مجمدة',
+        w3: 'سلسلة تبريد مضبوطة',
+        w4: 'تميز في الاستيراد',
+        w5: 'توزيع في جميع أنحاء البرازيل',
+        w6: 'خدمة متخصصة للشركات',
+        w7: 'سلامة الغذاء',
+        w8: 'تتبع المنتجات',
+        w9: 'تقنية التجميد',
+        w10: 'لوجستيات مبردة',
+        w11: 'اختيار دقيق للمنتجات',
+        w12: 'التزام بالجودة',
+        w13: 'شراكات تجارية موثوقة',
+        w14: 'حلول للصناعة والتجزئة',
+        w15: 'خبرة في السوق الدولية',
+        w16: 'كفاءة في كل تسليم'
+      },
+      about: {
+        titleHTML: 'قصة من الجودة والثقة والشراكات',
+        p1HTML: 'بخبرة تزيد على 10 سنوات في سوق الاستيراد، تعمل <strong>King Congelados</strong> في توريد الفواكه والخضروات المجمدة، وتقدم الجودة والأمان وحلول التوريد للشركات في مختلف القطاعات.',
+        p2: 'عملنا يتجاوز التوزيع. نتعامل مع منتجات مختارة وعملية لوجستية متخصصة، مع العناية بسلسلة التبريد في جميع المراحل، من المصدر حتى التسليم.',
+        p3: 'نخدم الصناعات الغذائية وسلاسل السوبرماركت والموزعين وعمليات خدمات الطعام، مع التركيز على جودة المنتجات وكفاءة الخدمة وبناء علاقات تجارية متينة ودائمة.',
+        s1num: '+10 سنوات',
+        s1: 'خبرة في السوق',
+        s2num: 'B2B',
+        s2: 'خدمة الشركات',
+        s3num: 'ABF',
+        s3: 'تقنية التجميد',
+        s4num: '100%',
+        s4: 'تتبع المنتجات',
+      },
+      mvv: {
+        title: 'جوهرنا',
+        missionTitle: 'مهمتنا',
+        mission: 'ربط السوق البرازيلي بالفواكه والخضروات المجمدة ذات الجودة العالمية، وتقديم حلول توريد تجمع بين سلامة الغذاء والكفاءة اللوجستية والالتزام بنمو شركائنا.',
+        visionTitle: 'رؤيتنا',
+        vision: 'أن نكون من أبرز المراجع الوطنية في استيراد وتوزيع الأطعمة المجمدة، متميزين بالتميز التشغيلي والثقة وبناء شراكات تجارية دائمة.',
+        valuesTitle: 'قيمنا',
+        values: 'الجودة في كل مرحلة · الاحترام والالتزام · النزاهة في العلاقات · التميز فيما نقوم به · شراكات تصنع القيمة · التطور المستمر.'
+      },
+      diff: {
+        titleHTML: 'لماذا تختارنا؟',
+        sub: 'الجودة والأمان والكفاءة في كل مرحلة. من الاستيراد إلى التوزيع، نقدم حلولًا تضمن الثقة والعملية والتوريد الفعّال لعملك.',
+        d1Title: 'التجميد السريع – تجميد فائق السرعة',
+        d1Desc: 'تقنية تجميد فائقة السرعة تقلل من تكوّن بلورات الجليد الكبيرة، وتساعد في الحفاظ على قوام الفواكه والخضروات وخصائصها الطبيعية وجودتها.',
+        d2Title: 'استيراد معتمد',
+        d2Desc: 'عمليات استيراد تتم وفق المتطلبات القانونية والصحية، مع احترام اللوائح الوطنية والدولية لضمان الأمان والمصدر.',
+        d3Title: 'الجودة والمصدر',
+        d3Desc: 'منتجات مختارة من موردين دوليين وفق معايير الجودة وسلامة الغذاء وتوحيد المواصفات لتلبية متطلبات السوق.',
+        d4Title: 'سلسلة تبريد مضبوطة',
+        d4Desc: 'مراقبة درجة الحرارة أثناء التخزين والنقل، بما يساهم في حفظ المنتجات وسلامتها وتكاملها حتى التسليم.',
+        d5Title: 'توزيع وطني للشركات',
+        d5Desc: 'حلول توريد للصناعات والموزعين والسوبرماركت وخدمات الطعام، بكفاءة لوجستية والتزام في كل تسليم.',
+        d6Title: 'خدمة متخصصة',
+        d6Desc: 'خدمة تجارية قريبة وشخصية تركز على فهم احتياجات كل عميل وتقديم حلول مناسبة لعمله.',
+        d7Title: 'تنوع المنتجات',
+        d7Desc: 'مجموعة متنوعة من الفواكه والخضروات المجمدة، توفر تعدد الاستخدامات والعملية وحلولًا لمختلف متطلبات سوق الأغذية.'
+      },
+      contact: {
+        desc: 'نحن نبحث عن شركاء تجاريين جادين لعلاقات طويلة الأمد. اضمن إمدادًا مستمرًا بأعلى المعايير لعمليتك.',
+        b1: 'إمداد مستمر دون نفاد المخزون',
+        b2: 'منتجات بشهادة صحية دولية',
+        b3: 'لوجستيات مبردة من البداية إلى النهاية',
+        b4: 'دعم فني وتجاري مخصص',
+        b5: 'عقود B2B بشروط تنافسية',
+        formCompany: 'اسم الشركة',
+        formCnpj: 'الرقم الضريبي',
+        formEmail: 'البريد الإلكتروني للشركة',
+        formPhone: 'واتساب / هاتف',
+        formVolume: 'الحجم الشهري المقدر',
+        volPlaceholder: 'اختر الحجم',
+        vol1: 'حتى 5 أطنان/شهر',
+        vol2: '5 إلى 10 أطنان/شهر',
+        vol3: '10 إلى 20 طن/شهر',
+        vol4: 'أكثر من 20 طن/شهر',
+        formMsg: 'رسالة (اختياري)',
+        phonePh: '+00 000 000 0000',
+        cnpjPh: '',
+        submit: 'إرسال العرض التجاري',
+        sending: 'جارٍ الإرسال...',
+        errRequired: 'يرجى ملء الحقول المطلوبة: اسم الشركة والرقم الضريبي والبريد الإلكتروني والهاتف والحجم.',
+        errEmail: 'بريد إلكتروني غير صالح. يرجى التحقق من العنوان.',
+        errPhone: 'هاتف غير صالح. أدخل رمز الدولة، مثال: 4567 123 50 971+',
+        errCnpj: 'رقم ضريبي غير صالح.',
+        errSend: 'حدث خطأ أثناء الإرسال. حاول مرة أخرى أو تواصل معنا عبر <a href="https://wa.me/556130387855" target="_blank" rel="noopener">واتساب: 7855-3038 (61) 55+</a>.',
+        errWait: 'يرجى الانتظار بضع ثوانٍ قبل الإرسال مرة أخرى.',
+        privacyHTML: 'بالإرسال، فإنك توافق على <a href="politica-de-privacidade.html">سياسة الخصوصية</a> (باللغة البرتغالية).'
+      },
+      modal: {
+        title: 'تم إرسال العرض!',
+        message: 'لقد تلقينا معلوماتك بنجاح. سيتصل بك فريقنا التجاري قريبًا.',
+        closeBtn: 'إغلاق'
+      },
+      footer: {
+        contactTitle: 'اتصل بنا',
+        mapLink: 'عرض على الخريطة ←',
+        addressText: 'النواة الريفية ألكسندر جوسماو، برازيليا — المقاطعة الفيدرالية، البرازيل',
+        rights: 'جميع الحقوق محفوظة.',
+        privacy: 'سياسة الخصوصية'
+      }
+    }
+  };
+
+  var MORE = {
+    PT: {
+      common: {
+        home: 'Início',
+        seeAll: 'Ver Todos os Produtos',
+        whatsapp: 'Falar no WhatsApp',
+        slidePhoto: 'Foto do produto',
+        slidePack: 'Embalagem',
+      },
+      cf: {
+        morangosName: 'Morangos',
+        morangosamorasName: 'Morangos e Amoras',
+        frutasvermelhasName: 'Frutas Vermelhas',
+        brocolisName: 'Brócolis',
+        ervilhasName: 'Ervilhas',
+        vagensName: 'Vagens',
+        mixvegetaisName: 'Mix de Vegetais',
+        titleHTML: '<span class="t-green">Nossos </span><span class="t-red">Produtos</span>',
+        sub: 'Frutas e vegetais congelados com qualidade e praticidade para atender às necessidades da indústria, do varejo e do food service.',
+        quote: 'Conhecer Condições de Fornecimento',
+      },
+      seg: {
+        titleHTML: 'Onde Estamos Presentes',
+        sub: 'Atendemos diferentes segmentos do mercado com frutas e vegetais congelados, oferecendo qualidade, praticidade e soluções de abastecimento para cada negócio.',
+        s1Title: 'Indústria Alimentícia',
+        s1Desc: 'Frutas e vegetais congelados para utilização como matéria-prima na fabricação de alimentos, com qualidade e padronização para os processos industriais.',
+        s2Title: 'Sorveterias e Açaiterias',
+        s2Desc: 'Frutas congeladas para o preparo de sorvetes, açaís, cremes e outras receitas, com praticidade e padronização.',
+        s3Title: 'Redes de Supermercados',
+        s3Desc: 'Variedade de frutas e vegetais congelados para comercialização no varejo, com embalagens adequadas e soluções de fornecimento para diferentes redes.',
+        s4Title: 'Food Service',
+        s4Desc: 'Soluções práticas para restaurantes, hotéis, cafeterias e cozinhas profissionais, facilitando o preparo e otimizando a rotina das operações.'
+      },
+      dep: {
+        clientsTitle: 'Alguns dos Nossos Clientes',
+        clientsSub: 'Empresas que confiam na nossa qualidade e no compromisso com cada entrega.',
+        sub: 'Depoimentos que refletem a confiança, a qualidade e as parcerias que construímos com nossos clientes.',
+        prev: 'Depoimento anterior',
+        next: 'Próximo depoimento',
+        label: 'Depoimentos de clientes',
+        t1: 'A gente trabalha com um volume grande de frutas congeladas e precisa manter um padrão nos produtos. O atendimento da King facilita bastante, principalmente na hora de organizar os pedidos e as entregas.',
+        r1: 'Compras | Indústria Alimentícia',
+        t2: 'Os vegetais são muito bons e facilitam nossa rotina na cozinha. Para quem trabalha com produção em quantidade, ter um produto prático e de qualidade faz toda a diferença.',
+        r2: 'Gestora de Operações | Food Service',
+        t3: 'O que mais gosto é da facilidade de comunicação. Quando precisamos de alguma informação ou temos uma demanda diferente, conseguimos conversar e resolver sem complicação.',
+        r3: 'Comprador | Rede de Supermercados',
+        t4: 'Usamos bastante morango congelado nas nossas receitas. A qualidade da fruta é importante porque interfere diretamente no resultado final. É um produto que atende bem ao que precisamos.',
+        r4: 'Produção | Indústria de Sobremesas',
+        t5: 'Já trabalhamos com vários fornecedores e sabemos como um bom atendimento faz diferença. Com a King, temos facilidade para negociar, tirar dúvidas e acompanhar os pedidos.',
+        r5: 'Gerente de Suprimentos | Distribuição de Alimentos',
+        t6: 'Para nossa produção, é importante ter previsibilidade. Não dá para ficar preocupada com matéria-prima toda semana. Ter um fornecedor organizado ajuda muito no planejamento.',
+        r6: 'Responsável de Compras | Indústria Alimentícia',
+        t7: 'É uma relação comercial tranquila. A equipe entende o que precisamos, os produtos têm boa aceitação e conseguimos manter uma comunicação próxima.',
+        r7: 'Gestor Comercial | Distribuidora de Alimentos',
+        t8: 'Quando precisamos repor estoque, o atendimento faz diferença. Gosto da atenção que recebemos e da clareza nas informações. Isso ajuda bastante quem está do outro lado organizando as compras.',
+        r8: 'Coordenador de Abastecimento | Varejo Alimentar',
+        t9: 'Trabalhamos com diferentes ingredientes congelados e precisamos de praticidade sem comprometer o resultado. Os produtos da King se encaixam bem na nossa rotina e atendem às necessidades da produção.',
+        r9: 'Gestora de Produção | Indústria de Alimentos'
+      },
+      pd: {
+        apFrozen: 'Produto Congelado',
+        apQuality: 'Qualidade',
+        apVersatility: 'Versatilidade',
+        apPracticality: 'Praticidade',
+        apCombo: 'Combinação de Frutas',
+        apVarietyFruit: 'Variedade de Frutas',
+        apVarietyVeg: 'Variedade de Vegetais',
+        apPack: 'Embalagem: 1,02 kg',
+        apLabel: 'Destaques do produto',
+        details: 'Ver detalhes',
+        close: 'Fechar',
+        prev: 'Produto anterior',
+        next: 'Próximo produto',
+        morangosDesc: 'Oferecem qualidade, praticidade e versatilidade para diferentes aplicações no setor alimentício. Ideais para a produção de sucos, sorvetes, geleias, sobremesas e outras preparações em escala comercial e industrial.',
+        morangosamorasDesc: 'Uma combinação que reúne sabor e versatilidade para diferentes aplicações. Ideal para indústrias alimentícias, fabricantes de bebidas, sorvetes, sobremesas e geleias que buscam praticidade em seus processos produtivos.',
+        frutasvermelhasDesc: 'Uma seleção ideal para o desenvolvimento de bebidas, sobremesas, sorvetes, geleias e produtos alimentícios. Uma solução versátil para empresas que valorizam qualidade e praticidade em suas operações.',
+        brocolisDesc: 'Combina qualidade e praticidade para atender às demandas do setor alimentício. Ideal para refeições prontas, acompanhamentos e diferentes preparações, proporcionando mais agilidade e eficiência às cozinhas profissionais.',
+        ervilhasDesc: 'Oferecem praticidade e versatilidade para diferentes aplicações gastronômicas e industriais. Ideais para refeições prontas, sopas, saladas e acompanhamentos, atendendo às necessidades de empresas do setor alimentício.',
+        vagensDesc: 'Proporcionam praticidade e versatilidade no preparo de diferentes receitas. Indicadas para indústrias alimentícias, cozinhas profissionais e operações de food service, facilitando os processos de produção e preparo.',
+        mixvegetaisDesc: 'Uma combinação que oferece variedade e praticidade para diferentes preparações. Ideal para refeições prontas, sopas, acompanhamentos e aplicações industriais, contribuindo para a eficiência e a versatilidade das operações alimentícias.',
+      },
+      qs: {
+        photoAlt: 'Integrante da equipe King Congelados',
+        bannerSub: 'Uma trajetória construída com experiência, qualidade e confiança, conectando fornecedores internacionais a empresas de todo o Brasil.',
+        p4: 'Com sede em Brasília (DF) e atuação em todo o território nacional, conectamos fornecedores internacionais ao mercado brasileiro, oferecendo soluções que acompanham as necessidades de cada negócio.',
+        opTitleHTML: 'Da Origem ao Seu Negócio',
+        opSub: 'Da seleção dos produtos à distribuição, cada etapa é conduzida com cuidado para garantir qualidade, segurança e eficiência no abastecimento.',
+        st1Title: 'Seleção na Origem',
+        st1Desc: 'Frutas e vegetais selecionados de fornecedores internacionais, seguindo critérios de qualidade e padrões de comercialização.',
+        st2Title: 'Congelamento de Alta Tecnologia',
+        st2Desc: 'Processos de congelamento que ajudam a preservar as características naturais dos alimentos, como sabor, textura e cor.',
+        st3Title: 'Importação e Controle de Qualidade',
+        st3Desc: 'Processos de importação realizados conforme as exigências sanitárias e regulatórias, com atenção à procedência e à rastreabilidade dos produtos.',
+        st4Title: 'Armazenamento em Temperatura Controlada',
+        st4Desc: 'Conservação em câmaras frigoríficas com controle de temperatura, garantindo condições adequadas de armazenamento.',
+        st5Title: 'Distribuição para o Seu Negócio',
+        st5Desc: 'Logística especializada para atender indústrias, supermercados, distribuidores e operações de food service, com eficiência e compromisso em cada entrega.'
+      },
+      lines: {
+        fruitTitle: 'Frutas Congeladas',
+        fruitText: 'Morangos, morangos com amoras e mix de frutas vermelhas, cuidadosamente selecionados e congelados para oferecer qualidade, frescor e praticidade ao seu negócio.',
+        vegTitle: 'Vegetais Congelados',
+        vegText: 'Brócolis, ervilhas, vagens e mix de vegetais cuidadosamente selecionados e congelados, garantindo praticidade, qualidade e versatilidade no preparo de diferentes receitas e nas demandas da sua operação.'
+      },
+      pp: {
+        bannerSub: 'Qualidade e variedade em frutas e vegetais congelados, com soluções que acompanham as necessidades do seu negócio.',
+        tabsLabel: 'Linhas de produtos',
+        pack: 'Embalagem de 1,02 kg'
+      },
+      dp: {
+        photoAlt: 'Colaborador da King Congelados conferindo produtos na câmara fria',
+        bannerSub: 'Tecnologia de congelamento, conformidade e logística a serviço da qualidade que chega à sua operação.'
+      },
+      ct: {
+        bannerSub: 'Entre em contato com nossa equipe comercial. Estamos prontos para atender você, esclarecer suas dúvidas e encontrar as melhores soluções para o seu negócio.',
+        whatsLabel: 'WhatsApp',
+        whatsAction: 'Iniciar conversa',
+        emailLabel: 'E-mail',
+        emailAction: 'Enviar e-mail',
+        instaLabel: 'Instagram',
+        instaAction: 'Seguir perfil',
+        addrValue: 'Núcleo Rural Alexandre Gusmão, Brasília — DF',
+        addrAction: 'Ver no mapa',
+        heroTitle: 'Estamos mais perto de você.',
+        photoAlt: 'Atendente da equipe comercial King Congelados ao telefone',
+        locTitle: 'Onde estamos.',
+        channelsLabel: 'Canais de atendimento',
+        mapTitle: 'Mapa com a localização da King Congelados',
+        faqTitleHTML: '<span class="t-green">Perguntas </span><span class="t-red">Frequentes</span>',
+        q1: 'Vocês vendem para pessoa física?',
+        a1: 'Não. A King Congelados atende exclusivamente empresas (B2B): indústrias, redes de varejo, sorveterias, açaiterias e operações de food service.',
+        q2: 'Qual é o pedido mínimo?',
+        a2: 'O volume mínimo varia conforme o produto e a região de entrega. Informe sua necessidade no formulário e nossa equipe envia as condições na proposta.',
+        q3: 'Para quais regiões vocês entregam?',
+        a3: 'Atendemos todo o mercado nacional, com logística refrigerada planejada para cada região.',
+        q4: 'Como a cadeia do frio é garantida?',
+        a4: 'Os produtos são armazenados e transportados a -18 °C constantes, com dataloggers que registram a temperatura de ponta a ponta e podem ser auditados.',
+        q5: 'Os produtos têm certificação sanitária?',
+        a5: 'Sim. Trabalhamos com produtos com certificação sanitária internacional e operação legalizada, com todas as licenças federais e internacionais em dia.',
+        q6: 'Como solicito o catálogo e uma proposta?',
+        a6: 'Preencha o formulário desta página ou fale conosco pelo WhatsApp. Retornamos em até 24 horas úteis.'
+      },
+      contact: {
+        formProduct: 'PRODUTO DE INTERESSE (OPCIONAL)',
+        partnerTitle: 'Vamos construir bons negócios juntos?',
+        formTitle: 'Solicite uma proposta comercial.',
+        formText: 'Conte um pouco sobre sua empresa e suas necessidades. Nossa equipe comercial entrará em contato.',
+        prodPlaceholder: 'Selecione o produto',
+        prodMulti: 'Vários produtos'
+      },
+      footer: {
+        navTitle: 'Institucional',
+        legalTitle: 'Legal',
+        terms: 'Termos de Uso',
+        cookies: 'Política de Cookies'
+      },
+      cookie: {
+        text: 'Este site usa apenas recursos essenciais, como lembrar o idioma escolhido, e o mapa do Google na página de contato.',
+        more: 'Saiba mais',
+        ok: 'Entendi'
+      },
+      legal: {
+        note: '',
+        docs: 'Documentos legais',
+        summary: 'Em resumo',
+        toc: 'Nesta página',
+        updated: 'Atualizado em',
+        read: 'min de leitura',
+        helpTitle: 'Dúvidas sobre este documento?',
+        helpText: 'Fale com a nossa equipe pelo e-mail',
+        helpBtn: 'Fale Conosco'
+      }
+    },
+
+    EN: {
+      common: {
+        home: 'Home',
+        seeAll: 'See All Products',
+        whatsapp: 'Chat on WhatsApp',
+        slidePhoto: 'Product photo',
+        slidePack: 'Packaging',
+      },
+      cf: {
+        morangosName: 'Strawberries',
+        morangosamorasName: 'Strawberries & Blackberries',
+        frutasvermelhasName: 'Red Fruits',
+        brocolisName: 'Broccoli',
+        ervilhasName: 'Green Peas',
+        vagensName: 'Green Beans',
+        mixvegetaisName: 'Mixed Vegetables',
+        titleHTML: '<span class="t-green">Our </span><span class="t-red">Products</span>',
+        sub: 'Frozen fruits and vegetables with quality and practicality to meet the needs of industry, retail and food service.',
+        quote: 'Learn About Supply Terms',
+      },
+      seg: {
+        titleHTML: 'Where We Are Present',
+        sub: 'We serve different market segments with frozen fruits and vegetables, offering quality, practicality and supply solutions for each business.',
+        s1Title: 'Food Industry',
+        s1Desc: 'Frozen fruits and vegetables used as raw material in food manufacturing, with quality and standardization for industrial processes.',
+        s2Title: 'Ice Cream and Açaí Shops',
+        s2Desc: 'Frozen fruits for preparing ice cream, açaí, creams and other recipes, with practicality and standardization.',
+        s3Title: 'Supermarket Chains',
+        s3Desc: 'A variety of frozen fruits and vegetables for retail, with suitable packaging and supply solutions for different chains.',
+        s4Title: 'Food Service',
+        s4Desc: 'Practical solutions for restaurants, hotels, cafés and professional kitchens, making preparation easier and streamlining daily operations.'
+      },
+      dep: {
+        clientsTitle: 'Some of Our Clients',
+        clientsSub: 'Companies that trust our quality and our commitment to every delivery.',
+        sub: 'Testimonials that reflect the trust, quality and partnerships we have built with our clients.',
+        prev: 'Previous testimonial',
+        next: 'Next testimonial',
+        label: 'Customer testimonials',
+        t1: 'We work with a large volume of frozen fruit and need consistent products. King’s service makes things much easier, especially when it comes to organizing orders and deliveries.',
+        r1: 'Purchasing | Food Industry',
+        t2: 'The vegetables are very good and make our kitchen routine easier. When you produce in large quantities, having a practical, high-quality product makes all the difference.',
+        r2: 'Operations Manager | Food Service',
+        t3: 'What I like most is how easy it is to communicate. When we need information or have a different request, we can talk it through and solve it without any hassle.',
+        r3: 'Buyer | Supermarket Chain',
+        t4: 'We use a lot of frozen strawberries in our recipes. Fruit quality matters because it directly affects the final result. It is a product that meets our needs well.',
+        r4: 'Production | Dessert Industry',
+        t5: 'We have worked with many suppliers and know how much good service matters. With King, it is easy to negotiate, ask questions and follow up on orders.',
+        r5: 'Supply Manager | Food Distribution',
+        t6: 'Predictability is important for our production. We can’t be worrying about raw materials every week. Having an organized supplier really helps with planning.',
+        r6: 'Purchasing Lead | Food Industry',
+        t7: 'It is a smooth business relationship. The team understands what we need, the products are well accepted and we keep in close contact.',
+        r7: 'Sales Manager | Food Distributor',
+        t8: 'When we need to restock, the service makes a difference. I appreciate the attention we receive and the clear information. It really helps those of us organizing the purchases.',
+        r8: 'Supply Coordinator | Food Retail',
+        t9: 'We work with different frozen ingredients and need practicality without compromising the result. King’s products fit well into our routine and meet our production needs.',
+        r9: 'Production Manager | Food Industry'
+      },
+      pd: {
+        apFrozen: 'Frozen Product',
+        apQuality: 'Quality',
+        apVersatility: 'Versatility',
+        apPracticality: 'Practicality',
+        apCombo: 'Fruit Blend',
+        apVarietyFruit: 'Variety of Fruits',
+        apVarietyVeg: 'Variety of Vegetables',
+        apPack: 'Pack: 1.02 kg',
+        apLabel: 'Product highlights',
+        details: 'View details',
+        close: 'Close',
+        prev: 'Previous product',
+        next: 'Next product',
+        morangosDesc: 'They offer quality, practicality and versatility for a range of food industry applications. Ideal for producing juices, ice cream, jams, desserts and other preparations on a commercial and industrial scale.',
+        morangosamorasDesc: 'A blend that brings together flavor and versatility for many applications. Ideal for food industries and makers of beverages, ice cream, desserts and jams looking for practicality in their production processes.',
+        frutasvermelhasDesc: 'A selection that is ideal for developing beverages, desserts, ice cream, jams and food products. A versatile solution for companies that value quality and practicality in their operations.',
+        brocolisDesc: 'It combines quality and practicality to meet the demands of the food sector. Ideal for ready meals, side dishes and many other preparations, bringing more speed and efficiency to professional kitchens.',
+        ervilhasDesc: 'They offer practicality and versatility for a range of culinary and industrial applications. Ideal for ready meals, soups, salads and side dishes, meeting the needs of food companies.',
+        vagensDesc: 'They bring practicality and versatility to the preparation of many recipes. Suited to food industries, professional kitchens and food service operations, streamlining production and preparation.',
+        mixvegetaisDesc: 'A blend that offers variety and practicality for many preparations. Ideal for ready meals, soups, side dishes and industrial applications, contributing to efficient and versatile food operations.',
+      },
+      qs: {
+        photoAlt: 'King Congelados team member',
+        bannerSub: 'A journey built on experience, quality and trust, connecting international suppliers to companies across Brazil.',
+        p4: 'Headquartered in Brasília (DF) and operating throughout Brazil, we connect international suppliers to the Brazilian market, offering solutions that keep pace with each business’s needs.',
+        opTitleHTML: 'From Origin to Your Business',
+        opSub: 'From product selection to distribution, every step is carried out with care to ensure quality, safety and efficient supply.',
+        st1Title: 'Selection at Origin',
+        st1Desc: 'Fruits and vegetables selected from international suppliers, following quality criteria and trading standards.',
+        st2Title: 'High-Tech Freezing',
+        st2Desc: 'Freezing processes that help preserve the natural characteristics of food, such as flavor, texture and color.',
+        st3Title: 'Import and Quality Control',
+        st3Desc: 'Import processes carried out in line with sanitary and regulatory requirements, with attention to product origin and traceability.',
+        st4Title: 'Temperature-Controlled Storage',
+        st4Desc: 'Storage in temperature-controlled cold rooms, ensuring proper storage conditions.',
+        st5Title: 'Distribution to Your Business',
+        st5Desc: 'Specialized logistics serving industries, supermarkets, distributors and food service operations, with efficiency and commitment in every delivery.'
+      },
+      lines: {
+        fruitTitle: 'Frozen Fruits',
+        fruitText: 'Strawberries, strawberries with blackberries and a red fruit mix, carefully selected and frozen to bring quality, freshness and practicality to your business.',
+        vegTitle: 'Frozen Vegetables',
+        vegText: 'Broccoli, peas, green beans and a vegetable mix, carefully selected and frozen, ensuring practicality, quality and versatility in preparing different recipes and meeting the demands of your operation.'
+      },
+      pp: {
+        bannerSub: 'Quality and variety in frozen fruits and vegetables, with solutions that keep pace with your business needs.',
+        tabsLabel: 'Product lines',
+        pack: '1.02 kg pack'
+      },
+      dp: {
+        photoAlt: 'King Congelados team member checking products in the cold room',
+        bannerSub: 'Freezing technology, compliance and logistics serving the quality that reaches your operation.'
+      },
+      ct: {
+        bannerSub: 'Get in touch with our sales team. We are ready to assist you, answer your questions and find the best solutions for your business.',
+        whatsLabel: 'WhatsApp',
+        whatsAction: 'Start a chat',
+        emailLabel: 'Email',
+        emailAction: 'Send an email',
+        instaLabel: 'Instagram',
+        instaAction: 'Follow us',
+        addrValue: 'Alexandre Gusmão Rural Nucleus, Brasília — DF, Brazil',
+        addrAction: 'View on map',
+        heroTitle: 'We are closer to you.',
+        photoAlt: 'King Congelados sales team member on the phone',
+        locTitle: 'Where we are.',
+        channelsLabel: 'Contact channels',
+        mapTitle: 'Map showing the location of King Congelados',
+        faqTitleHTML: '<span class="t-green">Frequently Asked </span><span class="t-red">Questions</span>',
+        q1: 'Do you sell to individuals?',
+        a1: 'No. King Congelados serves companies only (B2B): industries, retail chains, ice cream and açaí shops, and food service operations.',
+        q2: 'What is the minimum order?',
+        a2: 'The minimum volume depends on the product and the delivery region. Tell us your needs in the form and our team will send the conditions in the proposal.',
+        q3: 'Which regions do you deliver to?',
+        a3: 'We serve the entire Brazilian market, with refrigerated logistics planned for each region.',
+        q4: 'How is the cold chain guaranteed?',
+        a4: 'Products are stored and transported at a constant -18 °C, with dataloggers that record the temperature end to end and can be audited.',
+        q5: 'Do the products have sanitary certification?',
+        a5: 'Yes. We work with products holding international sanitary certification and a legalized operation, with all federal and international licenses up to date.',
+        q6: 'How do I request the catalog and a proposal?',
+        a6: 'Fill in the form on this page or contact us via WhatsApp. We reply within 24 business hours.'
+      },
+      contact: {
+        formProduct: 'PRODUCT OF INTEREST (OPTIONAL)',
+        partnerTitle: 'Shall we build good business together?',
+        formTitle: 'Request a commercial proposal.',
+        formText: 'Tell us a little about your company and your needs. Our sales team will get in touch.',
+        prodPlaceholder: 'Select the product',
+        prodMulti: 'Several products'
+      },
+      footer: {
+        navTitle: 'Company',
+        legalTitle: 'Legal',
+        terms: 'Terms of Use',
+        cookies: 'Cookie Policy'
+      },
+      cookie: {
+        text: 'This site only uses essential features, such as remembering your language, and the Google map on the contact page.',
+        more: 'Learn more',
+        ok: 'Got it'
+      },
+      legal: {
+        note: 'This document is available in Portuguese only.',
+        docs: 'Legal documents',
+        summary: 'In short',
+        toc: 'On this page',
+        updated: 'Updated on',
+        read: 'min read',
+        helpTitle: 'Questions about this document?',
+        helpText: 'Contact our team by email at',
+        helpBtn: 'Contact Us'
+      }
+    },
+
+    AR: {
+      common: {
+        home: 'الرئيسية',
+        seeAll: 'عرض جميع المنتجات',
+        whatsapp: 'تواصل عبر واتساب',
+        slidePhoto: 'صورة المنتج',
+        slidePack: 'العبوة',
+      },
+      cf: {
+        morangosName: 'فراولة',
+        morangosamorasName: 'فراولة وتوت أسود',
+        frutasvermelhasName: 'فواكه حمراء',
+        brocolisName: 'بروكلي',
+        ervilhasName: 'بازلاء',
+        vagensName: 'فاصوليا خضراء',
+        mixvegetaisName: 'خضروات مشكلة',
+        titleHTML: '<span class="t-red">منتجاتنا</span>',
+        sub: 'فواكه وخضروات مجمدة بجودة وعملية لتلبية احتياجات الصناعة والتجزئة وخدمات الطعام.',
+        quote: 'تعرّف على شروط التوريد',
+      },
+      seg: {
+        titleHTML: 'أين نتواجد',
+        sub: 'نخدم قطاعات مختلفة من السوق بالفواكه والخضروات المجمدة، ونقدم الجودة والعملية وحلول التوريد لكل عمل.',
+        s1Title: 'الصناعات الغذائية',
+        s1Desc: 'فواكه وخضروات مجمدة تُستخدم كمواد خام في تصنيع الأغذية، بجودة وتوحيد للمعايير في العمليات الصناعية.',
+        s2Title: 'محلات المثلجات والأساي',
+        s2Desc: 'فواكه مجمدة لتحضير المثلجات والأساي والكريمات ووصفات أخرى، بعملية وتوحيد للمعايير.',
+        s3Title: 'سلاسل السوبرماركت',
+        s3Desc: 'تشكيلة من الفواكه والخضروات المجمدة للبيع بالتجزئة، بعبوات مناسبة وحلول توريد لمختلف السلاسل.',
+        s4Title: 'خدمات الطعام',
+        s4Desc: 'حلول عملية للمطاعم والفنادق والمقاهي والمطابخ المهنية، تسهّل التحضير وتنظّم روتين العمليات.'
+      },
+      dep: {
+        clientsTitle: 'بعض عملائنا',
+        clientsSub: 'شركات تثق في جودتنا والتزامنا بكل عملية تسليم.',
+        sub: 'شهادات تعكس الثقة والجودة والشراكات التي بنيناها مع عملائنا.',
+        prev: 'الشهادة السابقة',
+        next: 'الشهادة التالية',
+        label: 'آراء العملاء',
+        t1: 'نتعامل مع كميات كبيرة من الفواكه المجمدة ونحتاج إلى الحفاظ على معيار ثابت للمنتجات. خدمة كينغ تسهّل الأمور كثيرًا، خاصة عند تنظيم الطلبات والتسليمات.',
+        r1: 'المشتريات | الصناعات الغذائية',
+        t2: 'الخضروات ممتازة وتسهّل روتيننا في المطبخ. لمن يعمل بالإنتاج بكميات كبيرة، وجود منتج عملي وعالي الجودة يصنع كل الفرق.',
+        r2: 'مديرة العمليات | خدمات الطعام',
+        t3: 'أكثر ما يعجبني هو سهولة التواصل. عندما نحتاج إلى معلومة أو لدينا طلب مختلف، نستطيع الحديث وحل الأمر دون تعقيد.',
+        r3: 'مشترٍ | سلسلة سوبرماركت',
+        t4: 'نستخدم الفراولة المجمدة كثيرًا في وصفاتنا. جودة الفاكهة مهمة لأنها تؤثر مباشرة في النتيجة النهائية. إنه منتج يلبي احتياجاتنا جيدًا.',
+        r4: 'الإنتاج | صناعة الحلويات',
+        t5: 'تعاملنا مع موردين كثيرين ونعرف كم تصنع الخدمة الجيدة فرقًا. مع كينغ، يسهل علينا التفاوض وطرح الأسئلة ومتابعة الطلبات.',
+        r5: 'مدير التوريد | توزيع الأغذية',
+        t6: 'القدرة على التوقع مهمة لإنتاجنا. لا يمكن أن نقلق بشأن المواد الخام كل أسبوع. وجود مورد منظم يساعد كثيرًا في التخطيط.',
+        r6: 'مسؤولة المشتريات | الصناعات الغذائية',
+        t7: 'إنها علاقة تجارية مريحة. الفريق يفهم ما نحتاجه، والمنتجات تلقى قبولًا جيدًا، ونحافظ على تواصل قريب.',
+        r7: 'مدير تجاري | موزع أغذية',
+        t8: 'عندما نحتاج إلى تجديد المخزون، تصنع الخدمة فرقًا. يعجبني الاهتمام الذي نتلقاه ووضوح المعلومات. هذا يساعد كثيرًا من يتولى تنظيم المشتريات.',
+        r8: 'منسق التموين | تجزئة الأغذية',
+        t9: 'نعمل بمكونات مجمدة مختلفة ونحتاج إلى العملية دون المساس بالنتيجة. منتجات كينغ تنسجم جيدًا مع روتيننا وتلبي احتياجات الإنتاج.',
+        r9: 'مديرة الإنتاج | الصناعات الغذائية'
+      },
+      pd: {
+        apFrozen: 'منتج مجمد',
+        apQuality: 'الجودة',
+        apVersatility: 'تعدد الاستخدامات',
+        apPracticality: 'العملية',
+        apCombo: 'مزيج من الفواكه',
+        apVarietyFruit: 'تنوع الفواكه',
+        apVarietyVeg: 'تنوع الخضروات',
+        apPack: 'العبوة: 1.02 كغ',
+        apLabel: 'مزايا المنتج',
+        details: 'عرض التفاصيل',
+        close: 'إغلاق',
+        prev: 'المنتج السابق',
+        next: 'المنتج التالي',
+        morangosDesc: 'توفر الجودة والعملية وتعدد الاستخدامات لمختلف تطبيقات قطاع الأغذية. مثالية لإنتاج العصائر والمثلجات والمربيات والحلويات وغيرها من المستحضرات على نطاق تجاري وصناعي.',
+        morangosamorasDesc: 'مزيج يجمع بين النكهة وتعدد الاستخدامات. مثالي لصناعات الأغذية ومصنعي المشروبات والمثلجات والحلويات والمربيات الباحثين عن العملية في عمليات الإنتاج.',
+        frutasvermelhasDesc: 'تشكيلة مثالية لتطوير المشروبات والحلويات والمثلجات والمربيات والمنتجات الغذائية. حل متعدد الاستخدامات للشركات التي تقدّر الجودة والعملية في عملياتها.',
+        brocolisDesc: 'يجمع بين الجودة والعملية لتلبية متطلبات قطاع الأغذية. مثالي للوجبات الجاهزة والأطباق الجانبية ومختلف المستحضرات، مما يمنح المطابخ المهنية سرعة وكفاءة أكبر.',
+        ervilhasDesc: 'توفر العملية وتعدد الاستخدامات لمختلف التطبيقات الغذائية والصناعية. مثالية للوجبات الجاهزة والشوربات والسلطات والأطباق الجانبية، وتلبي احتياجات شركات قطاع الأغذية.',
+        vagensDesc: 'توفر العملية وتعدد الاستخدامات في تحضير مختلف الوصفات. مناسبة لصناعات الأغذية والمطابخ المهنية وخدمات الطعام، وتسهّل عمليات الإنتاج والتحضير.',
+        mixvegetaisDesc: 'مزيج يوفر التنوع والعملية لمختلف المستحضرات. مثالي للوجبات الجاهزة والشوربات والأطباق الجانبية والتطبيقات الصناعية، ويسهم في كفاءة عمليات الأغذية وتنوعها.',
+      },
+      qs: {
+        photoAlt: 'أحد أعضاء فريق كينغ كونجيلادوس',
+        bannerSub: 'مسيرة بُنيت على الخبرة والجودة والثقة، تربط الموردين الدوليين بالشركات في جميع أنحاء البرازيل.',
+        p4: 'من مقرنا في برازيليا وبحضورنا في جميع أنحاء البرازيل، نربط الموردين الدوليين بالسوق البرازيلي، ونقدم حلولًا تواكب احتياجات كل عمل.',
+        opTitleHTML: 'من المصدر إلى عملك',
+        opSub: 'من اختيار المنتجات حتى التوزيع، تُنفَّذ كل مرحلة بعناية لضمان الجودة والأمان وكفاءة التوريد.',
+        st1Title: 'الاختيار من المصدر',
+        st1Desc: 'فواكه وخضروات مختارة من موردين دوليين وفق معايير الجودة ومعايير التجارة.',
+        st2Title: 'تجميد بتقنية عالية',
+        st2Desc: 'عمليات تجميد تساعد في الحفاظ على الخصائص الطبيعية للأغذية مثل النكهة والقوام واللون.',
+        st3Title: 'الاستيراد ومراقبة الجودة',
+        st3Desc: 'عمليات استيراد تتم وفق المتطلبات الصحية والتنظيمية، مع الاهتمام بمصدر المنتجات وإمكانية تتبعها.',
+        st4Title: 'تخزين بدرجة حرارة مضبوطة',
+        st4Desc: 'حفظ في غرف تبريد بدرجة حرارة مضبوطة يضمن ظروف تخزين مناسبة.',
+        st5Title: 'التوزيع إلى عملك',
+        st5Desc: 'خدمات لوجستية متخصصة لخدمة الصناعات والسوبرماركت والموزعين وعمليات خدمات الطعام، بكفاءة والتزام في كل عملية تسليم.'
+      },
+      lines: {
+        fruitTitle: 'فواكه مجمدة',
+        fruitText: 'فراولة، وفراولة مع توت أسود، ومزيج من الفواكه الحمراء، مختارة بعناية ومجمدة لتمنح عملك الجودة والانتعاش والعملية.',
+        vegTitle: 'خضروات مجمدة',
+        vegText: 'بروكلي وبازلاء وفاصوليا خضراء ومزيج من الخضروات، مختارة بعناية ومجمدة، تضمن العملية والجودة وتعدد الاستخدامات في تحضير مختلف الوصفات وتلبية متطلبات عملك.'
+      },
+      pp: {
+        bannerSub: 'جودة وتنوع في الفواكه والخضروات المجمدة، مع حلول تواكب احتياجات عملك.',
+        tabsLabel: 'خطوط المنتجات',
+        pack: 'عبوة 1.02 كجم'
+      },
+      dp: {
+        photoAlt: 'موظف في كينغ كونجيلادوس يتحقق من المنتجات في غرفة التبريد',
+        bannerSub: 'تقنية التجميد والامتثال واللوجستيات في خدمة الجودة التي تصل إلى عملك.'
+      },
+      ct: {
+        bannerSub: 'تواصل مع فريق المبيعات لدينا. نحن مستعدون لخدمتك والإجابة عن أسئلتك وإيجاد أفضل الحلول لعملك.',
+        whatsLabel: 'واتساب',
+        whatsAction: 'ابدأ المحادثة',
+        emailLabel: 'البريد الإلكتروني',
+        emailAction: 'أرسل بريداً',
+        instaLabel: 'إنستغرام',
+        instaAction: 'تابعنا',
+        addrValue: 'النواة الريفية ألكسندر جوسماو، برازيليا — البرازيل',
+        addrAction: 'عرض على الخريطة',
+        heroTitle: 'نحن أقرب إليك.',
+        photoAlt: 'موظفة من فريق مبيعات كينغ كونجيلادوس على الهاتف',
+        locTitle: 'أين نحن.',
+        channelsLabel: 'قنوات التواصل',
+        mapTitle: 'خريطة موقع King Congelados',
+        faqTitleHTML: '<span class="t-green">الأسئلة </span><span class="t-red">الشائعة</span>',
+        q1: 'هل تبيعون للأفراد؟',
+        a1: 'لا. تخدم King Congelados الشركات فقط: المصانع وسلاسل التجزئة ومحلات الآيس كريم والأساي والخدمات الغذائية.',
+        q2: 'ما هو الحد الأدنى للطلب؟',
+        a2: 'يختلف الحد الأدنى حسب المنتج ومنطقة التسليم. أخبرنا باحتياجاتك في النموذج وسيرسل فريقنا الشروط في العرض.',
+        q3: 'ما المناطق التي توصلون إليها؟',
+        a3: 'نخدم السوق البرازيلي بالكامل بلوجستيات مبردة مخططة لكل منطقة.',
+        q4: 'كيف يتم ضمان سلسلة التبريد؟',
+        a4: 'تُخزن المنتجات وتُنقل عند -18 درجة مئوية ثابتة، مع أجهزة تسجيل بيانات تسجل الحرارة من البداية إلى النهاية وقابلة للتدقيق.',
+        q5: 'هل المنتجات حاصلة على شهادة صحية؟',
+        a5: 'نعم. نعمل بمنتجات حاصلة على شهادة صحية دولية وبعملية قانونية مع جميع التراخيص الفيدرالية والدولية المحدثة.',
+        q6: 'كيف أطلب الكتالوج وعرض السعر؟',
+        a6: 'املأ النموذج في هذه الصفحة أو تواصل معنا عبر واتساب. نرد خلال 24 ساعة عمل.'
+      },
+      contact: {
+        formProduct: 'المنتج المطلوب (اختياري)',
+        partnerTitle: 'هل نبني معًا أعمالًا ناجحة؟',
+        formTitle: 'اطلب عرضًا تجاريًا.',
+        formText: 'أخبرنا قليلًا عن شركتك واحتياجاتها. سيتواصل معك فريق المبيعات لدينا.',
+        prodPlaceholder: 'اختر المنتج',
+        prodMulti: 'عدة منتجات'
+      },
+      footer: {
+        navTitle: 'الشركة',
+        legalTitle: 'قانوني',
+        terms: 'شروط الاستخدام',
+        cookies: 'سياسة ملفات تعريف الارتباط'
+      },
+      cookie: {
+        text: 'يستخدم هذا الموقع الميزات الأساسية فقط، مثل تذكر اللغة المختارة، وخريطة Google في صفحة الاتصال.',
+        more: 'اعرف المزيد',
+        ok: 'حسناً'
+      },
+      legal: {
+        note: 'هذه الوثيقة متاحة باللغة البرتغالية فقط.',
+        docs: 'الوثائق القانونية',
+        summary: 'باختصار',
+        toc: 'في هذه الصفحة',
+        updated: 'آخر تحديث',
+        read: 'دقائق للقراءة',
+        helpTitle: 'هل لديك أسئلة حول هذه الوثيقة؟',
+        helpText: 'تواصل مع فريقنا عبر البريد الإلكتروني',
+        helpBtn: 'اتصل بنا'
+      }
+    }
+  };
+
+  Object.keys(MORE).forEach(function (code) {
+    Object.keys(MORE[code]).forEach(function (sec) {
+      var target = I18N[code][sec] || (I18N[code][sec] = {});
+      Object.keys(MORE[code][sec]).forEach(function (k) { target[k] = MORE[code][sec][k]; });
+    });
+  });
+
+  var STORAGE_KEY = 'kc-lang';
+  var HTML_LANG = { PT: 'pt-BR', EN: 'en', AR: 'ar' };
+
+  function stored() {
+    try {
+      var v = localStorage.getItem(STORAGE_KEY);
+      return I18N[v] ? v : 'PT';
+    } catch (e) { return 'PT'; }
+  }
+
+  var root = document.documentElement;
+  var initial = stored();
+  root.classList.add('js');
+  if (initial !== 'PT') {
+    root.classList.add('i18n-pending');
+    root.lang = HTML_LANG[initial];
+    root.dir = initial === 'AR' ? 'rtl' : 'ltr';
+
+    setTimeout(function () { root.classList.remove('i18n-pending'); }, 2000);
+  }
+
+  window.KC_I18N = {
+    dict: I18N,
+    htmlLang: HTML_LANG,
+    storageKey: STORAGE_KEY,
+    initial: initial
+  };
+})();
