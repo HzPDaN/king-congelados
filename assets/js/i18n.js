@@ -409,8 +409,9 @@
         s4Desc: 'Soluções práticas para restaurantes, hotéis, cafeterias e cozinhas profissionais, facilitando o preparo e otimizando a rotina das operações.'
       },
       dep: {
-        logEyebrow: 'Logística que move negócios',
-        logTitle: 'Grandes conexões. Entregas que fazem a diferença.',
+        logTitleHTML: 'Logística que <span>move negócios</span>',
+        logLead: 'Grandes conexões. Entregas que fazem a diferença.',
+        logCta: 'Fale com nosso comercial',
         logSub: 'Cada entrega carrega o nosso compromisso com a qualidade. Uma operação logística pensada para manter a integridade dos produtos, otimizar o abastecimento e oferecer a confiança que cada negócio precisa para seguir em frente.',
         l1Title: 'Frota Própria e Fretada',
         l1Text: 'Estrutura que se adapta à sua demanda.',
@@ -590,8 +591,9 @@
         s4Desc: 'Practical solutions for restaurants, hotels, cafés and professional kitchens, making preparation easier and streamlining daily operations.'
       },
       dep: {
-        logEyebrow: 'Logistics that moves business',
-        logTitle: 'Great connections. Deliveries that make a difference.',
+        logTitleHTML: 'Logistics that <span>moves business</span>',
+        logLead: 'Great connections. Deliveries that make a difference.',
+        logCta: 'Talk to our sales team',
         logSub: 'Every delivery carries our commitment to quality. A logistics operation designed to keep products intact, optimize supply and offer the confidence every business needs to keep moving forward.',
         l1Title: 'Own and Chartered Fleet',
         l1Text: 'A structure that adapts to your demand.',
@@ -771,8 +773,9 @@
         s4Desc: 'حلول عملية للمطاعم والفنادق والمقاهي والمطابخ المهنية، تسهّل التحضير وتنظّم روتين العمليات.'
       },
       dep: {
-        logEyebrow: 'لوجستيات تحرّك الأعمال',
-        logTitle: 'روابط كبيرة. وتسليمات تصنع الفرق.',
+        logTitleHTML: 'لوجستيات <span>تحرّك الأعمال</span>',
+        logLead: 'روابط كبيرة. وتسليمات تصنع الفرق.',
+        logCta: 'تحدث مع فريق المبيعات',
         logSub: 'كل عملية تسليم تحمل التزامنا بالجودة. عملية لوجستية مصممة للحفاظ على سلامة المنتجات وتحسين التوريد وتقديم الثقة التي يحتاجها كل عمل للمضي قدمًا.',
         l1Title: 'أسطول خاص ومستأجر',
         l1Text: 'هيكل يتكيف مع طلبك.',

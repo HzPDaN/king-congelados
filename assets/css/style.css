@@ -1392,17 +1392,54 @@ html.pdet-lock{ overflow:hidden; }
 .cx-form__mail a:hover{ text-decoration:underline; }
 .cx-form__mail svg{ width:18px; height:18px; flex-shrink:0; }
 .cx-form__mail span{ display:block; }
-.logi{ background:#EFE6DD; border-top:1px solid #E3D7CB; text-align:center; }
 .logi__eyebrow{ font-family:var(--font); font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--red); margin-bottom:14px; }
-.logi__title{ max-width:18em; margin:0 auto 18px; text-wrap:balance; }
-.logi__sub{ max-width:720px; margin:0 auto 48px; }
-.logi__grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; max-width:1080px; margin:0 auto; }
-.logi__item{ background:#fff; border:1px solid #E7DDD3; border-radius:20px; padding:36px 28px 32px; transition:transform .35s var(--ease), box-shadow .35s ease; }
-.logi__item:hover{ transform:translateY(-4px); box-shadow:0 22px 40px -28px rgba(31,27,28,.35); }
-.logi__icon{ display:grid; place-items:center; width:64px; height:64px; margin:0 auto 20px; border-radius:50%; background:#FBE7EC; color:var(--red); transition:background .35s ease, color .35s ease; }
-.logi__icon svg{ width:30px; height:30px; }
-.logi__item:hover .logi__icon{ background:var(--red); color:#fff; }
-.logi__item-title{ font-size:20px; font-weight:600; color:var(--ink); margin-bottom:8px; }
-.logi__item-text{ color:var(--ink-2); font-size:16px; line-height:1.55; }
+.logi__title{ font-size:clamp(30px, 3.2vw, 44px); line-height:1.12; font-weight:700; letter-spacing:-.025em; color:var(--ink); margin-bottom:14px; text-wrap:balance; }
+.logi__title span{ color:var(--red); }
+.logi__sub{ color:var(--ink-2); font-size:16px; line-height:1.7; margin-bottom:18px; }
+.logi__list{ max-width:460px; border-top:1px solid #EADFD4; margin-bottom:26px; }
+.logi__item{ display:flex; align-items:center; gap:14px; padding:10px 0; border-bottom:1px solid #EADFD4; transition:padding .3s var(--ease); }
+.logi__item:hover{ padding-inline-start:6px; }
+.logi__icon{ display:grid; place-items:center; width:38px; height:38px; flex-shrink:0; border-radius:10px; background:rgba(191,4,54,.08); color:var(--red); transition:background .3s ease, color .3s ease, transform .3s var(--ease); }
+.logi__item:hover .logi__icon{ background:var(--red); color:#fff; transform:rotate(-6deg); }
+.logi__icon svg{ width:20px; height:20px; }
+.logi__item-title{ font-size:16px; font-weight:600; color:var(--ink); line-height:1.3; }
+.logi__item-text{ font-size:14px; color:var(--ink-2); line-height:1.45; }
+.logi__cta{ display:inline-flex; align-items:center; gap:10px; padding:16px 30px; font-size:14px; letter-spacing:1.5px; }
 [dir="rtl"] .logi__eyebrow{ letter-spacing:0; }
-@media (max-width:860px){ .logi__grid{ grid-template-columns:1fr; max-width:420px; } .logi__sub{ margin-bottom:36px; } }
+.logi{ position:relative; overflow:hidden; background:#fff; border-top:1px solid #EFE6DD; }
+.logi__media img{ display:block; width:100%; height:auto; }
+.logi__content{ max-width:560px; }
+@media (min-width:901px){
+  .logi{ display:flex; align-items:center; min-height:calc(100vw / 3.2); }
+  .logi__media{ position:absolute; inset:0; }
+  .logi__media img{ width:100%; height:100%; object-fit:cover; object-position:right center; }
+  .logi__panel{ position:relative; z-index:1; width:100%; padding-block:40px; }
+  .logi__content{ max-width:min(560px, 44vw); }
+  [dir="rtl"] .logi__content{ margin-right:auto; margin-left:0; }
+}
+@media (max-width:900px){
+  .logi{ display:flex; flex-direction:column-reverse; }
+  .logi__panel{ padding-block:48px 28px; }
+}
+@media (min-width:1200px){
+  .logi{ min-height:0; aspect-ratio:1920 / 609; }
+  .logi__panel{ padding-block:0; }
+  .logi__content{ font-size:clamp(12px, .8333vw, 16px); max-width:36em; }
+  .logi__eyebrow{ font-size:.8125em; margin-bottom:.9em; }
+  .logi__title{ font-size:2.75em; margin-bottom:.32em; }
+  .logi__sub{ font-size:1em; margin-bottom:1.1em; }
+  .logi__list{ max-width:29em; margin-bottom:1.6em; }
+  .logi__item{ gap:.9em; padding:.6em 0; }
+  .logi__icon{ width:2.375em; height:2.375em; border-radius:.6em; }
+  .logi__icon svg{ width:1.25em; height:1.25em; }
+  .logi__item-title{ font-size:1em; }
+  .logi__item-text{ font-size:.875em; }
+  .logi__cta{ font-size:.875em; padding:1.15em 2.15em; }
+}
+@media (max-width:1199px) and (min-width:901px){
+  .logi{ display:flex; flex-direction:column-reverse; align-items:stretch; min-height:0; }
+  .logi__media{ position:static; }
+  .logi__media img{ height:auto; }
+  .logi__panel{ padding-block:56px 32px; }
+}
+.logi__sub strong{ color:var(--ink); font-weight:600; }
