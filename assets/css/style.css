@@ -1404,7 +1404,6 @@ html.pdet-lock{ overflow:hidden; }
 .logi__icon svg{ width:20px; height:20px; }
 .logi__item-title{ font-size:16px; font-weight:600; color:var(--ink); line-height:1.3; }
 .logi__item-text{ font-size:14px; color:var(--ink-2); line-height:1.45; }
-.logi__cta{ display:inline-flex; align-items:center; gap:10px; padding:16px 30px; font-size:14px; letter-spacing:1.5px; }
 [dir="rtl"] .logi__eyebrow{ letter-spacing:0; }
 .logi{ position:relative; overflow:hidden; background:#fff; border-top:1px solid #EFE6DD; }
 .logi__media{ display:block; position:relative; }
@@ -1432,10 +1431,9 @@ html.pdet-lock{ overflow:hidden; }
 .logi__title{ font-size:clamp(32px, 4vw, 44px); line-height:1.08; font-weight:600; letter-spacing:-.02em; margin-bottom:18px; }
 .logi__sub{ font-size:18px; line-height:28px; margin-bottom:24px; }
 .logi__sub strong{ color:var(--ink); font-weight:600; }
-.logi__list{ max-width:480px; margin-bottom:30px; }
+.logi__list{ max-width:480px; margin-bottom:0; }
 .logi__item{ gap:16px; padding:13px 0; }
 .logi__icon{ width:44px; height:44px; border-radius:12px; }
 .logi__icon svg{ width:22px; height:22px; }
 .logi__item-title{ font-size:18px; }
 .logi__item-text{ font-size:15.5px; line-height:1.5; }
-.logi__cta{ padding:16px 32px; font-size:14px; letter-spacing:1.5px; }
