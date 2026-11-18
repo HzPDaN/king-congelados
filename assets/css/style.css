@@ -1407,26 +1407,27 @@ html.pdet-lock{ overflow:hidden; }
 .logi__cta{ display:inline-flex; align-items:center; gap:10px; padding:16px 30px; font-size:14px; letter-spacing:1.5px; }
 [dir="rtl"] .logi__eyebrow{ letter-spacing:0; }
 .logi{ position:relative; overflow:hidden; background:#fff; border-top:1px solid #EFE6DD; }
-.logi__media img{ display:block; width:100%; height:auto; }
+.logi__media{ display:block; position:relative; }
+.logi__media img{ display:block; width:100%; height:100%; object-fit:cover; object-position:30% 62%; }
+.logi__media::after{ content:''; position:absolute; inset:0; pointer-events:none; }
+.logi__panel{ position:relative; z-index:1; }
 .logi__content{ max-width:560px; }
-@media (min-width:1440px){
-  .logi{ display:flex; align-items:center; min-height:calc(100vw / 3.2); }
-  .logi__media{ position:absolute; inset:0; }
-  .logi__media img{ width:100%; height:100%; object-fit:cover; object-position:right center; }
-  .logi__panel{ position:relative; z-index:1; width:100%; padding-block:40px; }
-  .logi__content{ max-width:min(560px, 44vw); }
-  [dir="rtl"] .logi__content{ margin-right:auto; margin-left:0; }
+@media (max-width:1023px){
+  .logi{ display:flex; flex-direction:column; }
+  .logi__panel{ order:1; padding-block:var(--section-y) 8px; }
+  .logi__media{ order:2; aspect-ratio:16/10; margin-top:-24px; -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 30%); mask-image:linear-gradient(to bottom, transparent 0%, #000 30%); }
+  .logi__media::after{ background:linear-gradient(to bottom, #fff 0%, rgba(255,255,255,.55) 18%, rgba(255,255,255,0) 42%); }
 }
-@media (max-width:767px){
-  .logi{ display:flex; flex-direction:column-reverse; }
-  .logi__panel{ padding-block:48px 28px; }
+@media (min-width:768px) and (max-width:1023px){
+  .logi__media{ aspect-ratio:16/8; }
 }
-@media (min-width:768px) and (max-width:1439px){
-  .logi{ display:grid; grid-template-columns:1.1fr 1fr; align-items:stretch; }
-  .logi__panel{ grid-column:1; grid-row:1; padding-block:56px; padding-inline-end:12px; }
-  .logi__media{ grid-column:2; grid-row:1; position:relative; min-height:100%; -webkit-mask-image:linear-gradient(to right, transparent 0%, #000 30%); mask-image:linear-gradient(to right, transparent 0%, #000 30%); }
-  .logi__media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:22% center; }
-  .logi .logi__panel.container{ margin:0; max-width:none; padding-inline-start:max(24px, 4vw); }
+@media (min-width:1024px){
+  .logi{ display:flex; align-items:center; min-height:clamp(600px, 35vw, 700px); }
+  .logi__media{ position:absolute; top:0; bottom:0; right:0; width:62%; -webkit-mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 10%, #000 30%); mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 10%, #000 30%); }
+  .logi__media::after{ background:radial-gradient(90% 80% at 0% 55%, #fff 0%, rgba(255,255,255,.6) 18%, rgba(255,255,255,0) 40%), linear-gradient(to right, rgba(255,255,255,.5) 0%, rgba(255,255,255,0) 26%); }
+  .logi__panel{ width:100%; padding-block:var(--section-y); }
+  .logi__content{ max-width:min(560px, 42vw); }
+  [dir="rtl"] .logi__media{ right:auto; left:0; transform:scaleX(-1); }
 }
 .logi__title{ font-size:clamp(32px, 4vw, 44px); line-height:1.08; font-weight:600; letter-spacing:-.02em; margin-bottom:18px; }
 .logi__sub{ font-size:18px; line-height:28px; margin-bottom:24px; }
@@ -1438,18 +1439,3 @@ html.pdet-lock{ overflow:hidden; }
 .logi__item-title{ font-size:18px; }
 .logi__item-text{ font-size:15.5px; line-height:1.5; }
 .logi__cta{ padding:16px 32px; font-size:14px; letter-spacing:1.5px; }
-@media (min-width:1440px){
-  .logi__panel{ padding-block:64px; }
-  .logi__content{ max-width:min(600px, 46vw); }
-}
-@media (min-width:1440px){
-  .logi__panel{ padding-block:24px; }
-  .logi__content{ max-width:min(620px, 46vw); }
-  .logi__title{ font-size:clamp(34px, 2.6vw, 48px); margin-bottom:.4em; }
-  .logi__sub{ font-size:clamp(15.5px, 1.05vw, 19px); line-height:1.6; margin-bottom:1.1em; }
-  .logi__list{ max-width:clamp(420px, 30vw, 540px); margin-bottom:clamp(20px, 1.6vw, 32px); }
-  .logi__item{ padding:clamp(8px, .65vw, 13px) 0; }
-  .logi__icon{ width:clamp(38px, 2.6vw, 48px); height:clamp(38px, 2.6vw, 48px); }
-  .logi__item-title{ font-size:clamp(16px, 1.1vw, 19px); }
-  .logi__item-text{ font-size:clamp(14px, .9vw, 16px); }
-}
