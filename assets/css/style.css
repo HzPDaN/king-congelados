@@ -1414,7 +1414,7 @@ html.pdet-lock{ overflow:hidden; }
 @media (max-width:1023px){
   .logi{ display:flex; flex-direction:column; }
   .logi__panel{ order:1; padding-block:var(--section-y) 8px; }
-  .logi__media{ order:2; aspect-ratio:16/10; margin-top:-24px; -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 30%); mask-image:linear-gradient(to bottom, transparent 0%, #000 30%); }
+  .logi__media{ order:2; aspect-ratio:16/10; margin-top:24px; -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 30%); mask-image:linear-gradient(to bottom, transparent 0%, #000 30%); }
   .logi__media::after{ background:linear-gradient(to bottom, #EFE6DD 0%, rgba(239,230,221,.55) 18%, rgba(239,230,221,0) 42%); }
 }
 @media (min-width:768px) and (max-width:1023px){
@@ -1422,18 +1422,18 @@ html.pdet-lock{ overflow:hidden; }
 }
 @media (min-width:1024px){
   .logi{ display:flex; align-items:center; min-height:clamp(600px, 35vw, 700px); }
-  .logi__media{ position:absolute; top:0; bottom:0; right:0; width:62%; -webkit-mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 10%, #000 30%); mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 10%, #000 30%); }
+  .logi__media{ position:absolute; top:0; bottom:0; right:0; width:56%; -webkit-mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 10%, #000 30%); mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 10%, #000 30%); }
   .logi__media::after{ background:radial-gradient(90% 80% at 0% 55%, #EFE6DD 0%, rgba(239,230,221,.6) 18%, rgba(239,230,221,0) 40%), linear-gradient(to right, rgba(239,230,221,.5) 0%, rgba(239,230,221,0) 26%); }
   .logi__panel{ width:100%; padding-block:var(--section-y); }
-  .logi__content{ max-width:min(560px, 42vw); }
+  .logi__content{ max-width:min(560px, 40vw); }
   [dir="rtl"] .logi__media{ right:auto; left:0; transform:scaleX(-1); }
 }
 .logi__title{ font-size:clamp(32px, 4vw, 44px); line-height:1.08; font-weight:600; letter-spacing:-.02em; margin-bottom:28px; }
 .logi__sub{ font-size:18px; line-height:30px; margin-bottom:32px; }
 .logi__sub strong{ color:var(--ink); font-weight:600; }
 .logi__list{ max-width:480px; margin-bottom:0; }
-.logi__item{ gap:16px; padding:13px 0; }
-.logi__icon{ width:44px; height:44px; border-radius:12px; }
-.logi__icon svg{ width:22px; height:22px; }
+.logi__item{ gap:18px; padding:14px 0; }
+.logi__icon{ width:54px; height:54px; border-radius:14px; }
+.logi__icon svg{ width:26px; height:26px; }
 .logi__item-title{ font-size:18px; }
 .logi__item-text{ font-size:15.5px; line-height:1.5; }
