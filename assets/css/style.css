@@ -1424,7 +1424,7 @@ html.pdet-lock{ overflow:hidden; }
 @media (min-width:1200px){
   .logi{ min-height:0; aspect-ratio:1920 / 609; }
   .logi__panel{ padding-block:0; }
-  .logi__content{ font-size:clamp(12px, .8333vw, 16px); max-width:36em; }
+  .logi__content{ font-size:clamp(12px, .8333vw, 18px); max-width:36em; }
   .logi__eyebrow{ font-size:.8125em; margin-bottom:.9em; }
   .logi__title{ font-size:2.75em; margin-bottom:.32em; }
   .logi__sub{ font-size:1em; margin-bottom:1.1em; }
