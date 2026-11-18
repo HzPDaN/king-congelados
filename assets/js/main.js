@@ -5,7 +5,7 @@
   var root = document.documentElement;
   var lang = I.initial;
 
-  var FORM_ENDPOINT = 'https://formspree.io/f/xaqggnoz';
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/supplier@kingcongelados.com';
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -489,7 +489,8 @@
       var payload = {
         _subject: 'Nova Proposta Comercial — ' + company,
         _replyto: f.email.value.trim(),
-        _language: lang.toLowerCase(),
+        _template: 'table',
+        _captcha: 'false',
         'Nome da Empresa': company,
         'CNPJ / Tax ID': f.cnpj.value.trim() || 'Não informado',
         'E-mail': f.email.value.trim(),
@@ -506,6 +507,9 @@
         body: JSON.stringify(payload)
       }).then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      }).then(function (data) {
+        if (data && String(data.success) === 'false') throw new Error(data.message || 'envio');
         lastSent = Date.now();
         form.reset();
         openModal();
