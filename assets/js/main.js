@@ -406,15 +406,6 @@
     return out;
   }
 
-  function formatCNPJ(value) {
-    var d = value.replace(/\D/g, '').substring(0, 14);
-    if (d.length <= 2) return d;
-    if (d.length <= 5) return d.substring(0, 2) + '.' + d.substring(2);
-    if (d.length <= 8) return d.substring(0, 2) + '.' + d.substring(2, 5) + '.' + d.substring(5);
-    if (d.length <= 12) return d.substring(0, 2) + '.' + d.substring(2, 5) + '.' + d.substring(5, 8) + '/' + d.substring(8);
-    return d.substring(0, 2) + '.' + d.substring(2, 5) + '.' + d.substring(5, 8) + '/' + d.substring(8, 12) + '-' + d.substring(12, 14);
-  }
-
   var VOLUME_PT = {
     '1': 'Até 5 toneladas/mês',
     '2': '5 a 10 toneladas/mês',
@@ -447,7 +438,8 @@
       if (lang === 'PT') f.phone.value = formatPhoneBR(f.phone.value);
     });
     f.cnpj.addEventListener('input', function () {
-      if (lang === 'PT') f.cnpj.value = formatCNPJ(f.cnpj.value);
+      var v = f.cnpj.value.replace(/[^0-9A-Za-z./ -]/g, '');
+      if (v !== f.cnpj.value) f.cnpj.value = v;
     });
 
     form.querySelectorAll('input, select, textarea').forEach(function (field) {
@@ -478,10 +470,7 @@
         ? phoneDigits.length >= 10 && phoneDigits.length <= 13
         : phoneDigits.length >= 7 && phoneDigits.length <= 15;
       if (!phoneOk) return fail(t('contact.errPhone'), f.phone);
-      var cnpj = f.cnpj.value.trim();
-      if (lang === 'PT' && cnpj && cnpj.replace(/\D/g, '').length !== 14) {
-        return fail(t('contact.errCnpj'), f.cnpj);
-      }
+      if (f.cnpj.value.replace(/[^0-9A-Za-z]/g, '').length < 4) return fail(t('contact.errCnpj'), f.cnpj);
       return true;
     }
 
@@ -502,7 +491,7 @@
         _replyto: f.email.value.trim(),
         _language: lang.toLowerCase(),
         'Nome da Empresa': company,
-        'CNPJ': f.cnpj.value.trim() || 'Não informado',
+        'CNPJ / Tax ID': f.cnpj.value.trim() || 'Não informado',
         'E-mail': f.email.value.trim(),
         'Telefone': f.phone.value.trim(),
         'Produto de Interesse': productLabelPT(f.product ? f.product.value : ''),
