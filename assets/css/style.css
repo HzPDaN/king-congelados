@@ -1409,7 +1409,7 @@ html.pdet-lock{ overflow:hidden; }
 .logi{ position:relative; overflow:hidden; background:#fff; border-top:1px solid #EFE6DD; }
 .logi__media img{ display:block; width:100%; height:auto; }
 .logi__content{ max-width:560px; }
-@media (min-width:901px){
+@media (min-width:1440px){
   .logi{ display:flex; align-items:center; min-height:calc(100vw / 3.2); }
   .logi__media{ position:absolute; inset:0; }
   .logi__media img{ width:100%; height:100%; object-fit:cover; object-position:right center; }
@@ -1417,29 +1417,39 @@ html.pdet-lock{ overflow:hidden; }
   .logi__content{ max-width:min(560px, 44vw); }
   [dir="rtl"] .logi__content{ margin-right:auto; margin-left:0; }
 }
-@media (max-width:900px){
+@media (max-width:767px){
   .logi{ display:flex; flex-direction:column-reverse; }
   .logi__panel{ padding-block:48px 28px; }
 }
-@media (min-width:1200px){
-  .logi{ min-height:0; aspect-ratio:1920 / 609; }
-  .logi__panel{ padding-block:0; }
-  .logi__content{ font-size:clamp(12px, .8333vw, 18px); max-width:36em; }
-  .logi__eyebrow{ font-size:.8125em; margin-bottom:.9em; }
-  .logi__title{ font-size:2.75em; margin-bottom:.32em; }
-  .logi__sub{ font-size:1em; margin-bottom:1.1em; }
-  .logi__list{ max-width:29em; margin-bottom:1.6em; }
-  .logi__item{ gap:.9em; padding:.6em 0; }
-  .logi__icon{ width:2.375em; height:2.375em; border-radius:.6em; }
-  .logi__icon svg{ width:1.25em; height:1.25em; }
-  .logi__item-title{ font-size:1em; }
-  .logi__item-text{ font-size:.875em; }
-  .logi__cta{ font-size:.875em; padding:1.15em 2.15em; }
+@media (min-width:768px) and (max-width:1439px){
+  .logi{ display:grid; grid-template-columns:1.1fr 1fr; align-items:stretch; }
+  .logi__panel{ grid-column:1; grid-row:1; padding-block:56px; padding-inline-end:12px; }
+  .logi__media{ grid-column:2; grid-row:1; position:relative; min-height:100%; -webkit-mask-image:linear-gradient(to right, transparent 0%, #000 30%); mask-image:linear-gradient(to right, transparent 0%, #000 30%); }
+  .logi__media img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:22% center; }
+  .logi .logi__panel.container{ margin:0; max-width:none; padding-inline-start:max(24px, 4vw); }
 }
-@media (max-width:1199px) and (min-width:901px){
-  .logi{ display:flex; flex-direction:column-reverse; align-items:stretch; min-height:0; }
-  .logi__media{ position:static; }
-  .logi__media img{ height:auto; }
-  .logi__panel{ padding-block:56px 32px; }
-}
+.logi__title{ font-size:clamp(32px, 4vw, 44px); line-height:1.08; font-weight:600; letter-spacing:-.02em; margin-bottom:18px; }
+.logi__sub{ font-size:18px; line-height:28px; margin-bottom:24px; }
 .logi__sub strong{ color:var(--ink); font-weight:600; }
+.logi__list{ max-width:480px; margin-bottom:30px; }
+.logi__item{ gap:16px; padding:13px 0; }
+.logi__icon{ width:44px; height:44px; border-radius:12px; }
+.logi__icon svg{ width:22px; height:22px; }
+.logi__item-title{ font-size:18px; }
+.logi__item-text{ font-size:15.5px; line-height:1.5; }
+.logi__cta{ padding:16px 32px; font-size:14px; letter-spacing:1.5px; }
+@media (min-width:1440px){
+  .logi__panel{ padding-block:64px; }
+  .logi__content{ max-width:min(600px, 46vw); }
+}
+@media (min-width:1440px){
+  .logi__panel{ padding-block:24px; }
+  .logi__content{ max-width:min(620px, 46vw); }
+  .logi__title{ font-size:clamp(34px, 2.6vw, 48px); margin-bottom:.4em; }
+  .logi__sub{ font-size:clamp(15.5px, 1.05vw, 19px); line-height:1.6; margin-bottom:1.1em; }
+  .logi__list{ max-width:clamp(420px, 30vw, 540px); margin-bottom:clamp(20px, 1.6vw, 32px); }
+  .logi__item{ padding:clamp(8px, .65vw, 13px) 0; }
+  .logi__icon{ width:clamp(38px, 2.6vw, 48px); height:clamp(38px, 2.6vw, 48px); }
+  .logi__item-title{ font-size:clamp(16px, 1.1vw, 19px); }
+  .logi__item-text{ font-size:clamp(14px, .9vw, 16px); }
+}
