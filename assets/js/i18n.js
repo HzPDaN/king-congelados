@@ -120,7 +120,7 @@
       footer: {
         contactTitle: 'Contato',
         mapLink: 'Ver no Mapa →',
-        addressText: 'Núcleo Rural Alexandre Gusmão, Brasília — DF, Brasil',
+        addressText: 'Núcleo Rural Alexandre Gusmão, Reserva G - Gleba 3/065, Plano Piloto, 72701-997, Distrito Federal, Brasil',
         rights: 'Todos os direitos reservados.',
         privacy: 'Política de Privacidade'
       }
@@ -244,7 +244,7 @@
       footer: {
         contactTitle: 'Contact',
         mapLink: 'View on Map →',
-        addressText: 'Alexandre Gusmão Rural Nucleus, Brasília — DF, Brazil',
+        addressText: 'Núcleo Rural Alexandre Gusmão, Reserva G - Gleba 3/065, Plano Piloto, 72701-997, Federal District, Brazil',
         rights: 'All rights reserved.',
         privacy: 'Privacy Policy'
       }
@@ -368,7 +368,7 @@
       footer: {
         contactTitle: 'اتصل بنا',
         mapLink: 'عرض على الخريطة ←',
-        addressText: 'النواة الريفية ألكسندر جوسماو، برازيليا — المقاطعة الفيدرالية، البرازيل',
+        addressText: 'Núcleo Rural Alexandre Gusmão, Reserva G - Gleba 3/065، بلانو بيلوتو، 72701-997، المقاطعة الفيدرالية، البرازيل',
         rights: 'جميع الحقوق محفوظة.',
         privacy: 'سياسة الخصوصية'
       }
@@ -503,7 +503,7 @@
         emailAction: 'Enviar e-mail',
         instaLabel: 'Instagram',
         instaAction: 'Seguir perfil',
-        addrValue: 'Núcleo Rural Alexandre Gusmão, Brasília — DF',
+        addrValue: 'Núcleo Rural Alexandre Gusmão, Reserva G - Gleba 3/065, Plano Piloto, 72701-997, Distrito Federal, Brasil',
         addrAction: 'Ver no mapa',
         heroTitle: 'Estamos mais perto de você.',
         photoAlt: 'Atendente da equipe comercial King Congelados ao telefone',
@@ -684,7 +684,7 @@
         emailAction: 'Send an email',
         instaLabel: 'Instagram',
         instaAction: 'Follow us',
-        addrValue: 'Alexandre Gusmão Rural Nucleus, Brasília — DF, Brazil',
+        addrValue: 'Núcleo Rural Alexandre Gusmão, Reserva G - Gleba 3/065, Plano Piloto, 72701-997, Federal District, Brazil',
         addrAction: 'View on map',
         heroTitle: 'We are closer to you.',
         photoAlt: 'King Congelados sales team member on the phone',
@@ -865,7 +865,7 @@
         emailAction: 'أرسل بريداً',
         instaLabel: 'إنستغرام',
         instaAction: 'تابعنا',
-        addrValue: 'النواة الريفية ألكسندر جوسماو، برازيليا — البرازيل',
+        addrValue: 'Núcleo Rural Alexandre Gusmão, Reserva G - Gleba 3/065، بلانو بيلوتو، 72701-997، المقاطعة الفيدرالية، البرازيل',
         addrAction: 'عرض على الخريطة',
         heroTitle: 'نحن أقرب إليك.',
         photoAlt: 'موظفة من فريق مبيعات كينغ كونجيلادوس على الهاتف',
